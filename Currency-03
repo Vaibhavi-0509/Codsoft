@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class CurrencyConverter {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+        // Get the base currency from the user
+        System.out.println("Enter the base currency:");
+        String baseCurrency = scanner.nextLine();
+        // Get the target currency from the user
+        System.out.println("Enter the target currency:");
+        String targetCurrency = scanner.nextLine();
+        // Get the amount to convert from the user
+        System.out.println("Enter the amount to convert:");
+        double amount = scanner.nextDouble();
+        // Fetch the exchange rate from an API
+        double exchangeRate = getExchangeRate(baseCurrency, targetCurrency);
+        // Convert the amount from the base currency to the target currency
+        double convertedAmount = amount * exchangeRate;
+        // Display the converted amount to the user
+        System.out.println("The converted amount is: " + convertedAmount + " " + targetCurrency);
+    }
+    private static double getExchangeRate(String baseCurrency, String targetCurrency) {
+        // TODO: Implement this method to fetch the exchange rate from an API
+        return 82.7;
+    }
+}
